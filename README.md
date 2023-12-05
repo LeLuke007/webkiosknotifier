@@ -15,7 +15,3 @@ Before running the script:
 <br>
 <b>WebkioskPassword:</b> webkiosk password
 <br>
-<h3>URL changes</h3>
-change 1920ODDSEM to your current semester check <a href="https://webkiosk.thapar.edu">webkiosk.thapar.edu</a> for exact format
-<br>
-</p>
