@@ -40,6 +40,6 @@ with requests.Session() as c:
                 f.write(str(tr))
             server.quit()
         except:
-            server.sendmail(fromaddr,[fromaddr],"Error Occurred")
+            print("Error Occured While Sending Mail")
             server.quit()
 
