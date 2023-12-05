@@ -5,7 +5,7 @@ with open("currentgradesVal.txt","r") as f:
     current=int(f.read())
 with requests.Session() as c:
     loginurl='https://webkiosk.thapar.edu/CommonFiles/UserAction.jsp'
-    gradesurl="https://webkiosk.thapar.edu/StudentFiles/Exam/StudentEventGradesView.jsp?x=&exam=1920ODDSEM&Subject=ALL"
+    gradesurl="https://webkiosk.thapar.edu/StudentFiles/Exam/StudentEventGradesView.jsp?x=&exam=2324ODDSEM&Subject=ALL"
     headers={
     "Connection": "keep-alive",
     "Origin": "https://webkiosk.thapar.edu",
