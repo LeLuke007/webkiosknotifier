@@ -5,7 +5,7 @@ with open("currentVal.txt","r") as f:
     current=int(f.read())
 with requests.Session() as c:
     loginurl='https://webkiosk.thapar.edu/CommonFiles/UserAction.jsp'
-    marksurl="https://webkiosk.thapar.edu/StudentFiles/Exam/StudentEventMarksView.jsp?x=&exam=1920ODDSEM"
+    marksurl="https://webkiosk.thapar.edu/StudentFiles/Exam/StudentEventMarksView.jsp?x=&exam=2324ODDSEM"
     headers={
     "Connection": "keep-alive",
     "Origin": "https://webkiosk.thapar.edu",
