@@ -1,8 +1,7 @@
 import requests
 import smtplib
 import os
-with open("currentVal.txt","r") as f:
-    current=int(f.read())
+
 with requests.Session() as c:
     loginurl='https://webkiosk.thapar.edu/CommonFiles/UserAction.jsp'
     marksurl="https://webkiosk.thapar.edu/StudentFiles/Exam/StudentEventMarksView.jsp?x=&exam=2324ODDSEM"
@@ -19,7 +18,12 @@ with requests.Session() as c:
     "txtPin": "Password/Pin",
     "Password": os.getenv("WebkioskPassword"),
     }
+    c.post(loginurl,logindata,headers)
+    page=c.get(marksurl)
+    tr= int(page.text.count('<tr>')-4)
 
+    with open("currentVal.txt","w") as f:
+        f.write(str(tr))
     
     while(True):
         with open("currentVal.txt","r") as f:
